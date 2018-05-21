@@ -1,0 +1,3 @@
+html{font-size:31.25%}body,.container{max-width:100%;margin:0;padding:0}section.cookie-law,header section.topnav ul,header section.navigation,footer section:not(:last-child){display:none}header>section.topnav{display:block !important;visibility:visible}header>section.topnav>*:nth-child(2){flex:1}header.fixed{position:relative !important}main>section{page-break-after:avoid;page-break-inside:avoid}h1,h2,h3,h4,h5,h6{page-break-after:avoid;page-break-inside:avoid}figure,img{page-break-inside:avoid;page-break-after:avoid}blockquote,table,pre{page-break-inside:avoid}ul,ol,dl{page-break-before:avoid}
+
+/*# sourceMappingURL=maps/print.css.map */

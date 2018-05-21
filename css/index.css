@@ -1,0 +1,541 @@
+/* *{
+  margin: 0;
+  padding: 0;
+} */
+
+
+body{
+    position: relative;
+    background-color: #bcc3c7;
+    color: #3b4245;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+  }  
+
+  .container{
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;/*覆盖了bootstrap的左右15px的padding*/
+    overflow: hidden;
+
+  }  
+
+  .container .mainContent{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+  }
+
+  .container .mainContent .mainContent-bg{
+    width: 93%;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    background-image: url('../img/bg.jpg');
+    /* background-position: top left; */
+    /* background-size: 400px 400px; */
+    background-position: 0 60px;
+    background-size: 570px 570px;
+    background-repeat: no-repeat;
+  }
+
+  @media(max-width: 768px){
+    
+    .container{
+      position: relative;
+      background-color: #fff;
+      /* margin: 0 auto; */
+      overflow: hidden;
+      margin: 0;/*当宽度小于768px时，两侧的外边距消失*/
+    }
+    .container .mainContent .mainContent-bg{
+      width: 100%;
+      margin: 0 auto;
+      /* border: 1px solid black; */
+      background-image: url('../img/bg.jpg');
+      /* background-position: top left; */
+      /* background-size: 400px 400px; */
+      background-position: 0 60px;
+      background-size: 570px 570px;
+      background-repeat: no-repeat;
+    } 
+  }
+
+.container .mainContent .mainContent-bg form{
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+    background-color: #fff;
+    padding: 40px; 
+    /* border: 1px solid black; */
+    box-shadow: 0 0px 15px 0 #e0e4e4;
+}
+
+.container .mainContent .mainContent-bg form .selectType{
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.container .mainContent .mainContent-bg form .row .floor-1{
+  font-size: 18px;
+  color: #5b5c5d;
+}
+.container .mainContent .mainContent-bg form .row .floor-2{
+  font-size: 14px;
+  color: #ababab;
+}
+
+select {
+  font-size: 14px;
+  color: #9f9f9f;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border: 1px solid #9f9f9f;
+  cursor: pointer;
+  height: 40px;
+  margin-top: 10px;
+}
+input{
+  font-size: 14px;
+  color: #ababab;
+}
+
+
+@media(max-width: 768px){
+  .container .mainContent .mainContent-bg form .row .floor-1{
+    font-size: 14px;
+  }
+
+  .container .mainContent .mainContent-bg form .row .floor-2{
+    font-size: 12px;
+  }
+
+  .container .mainContent .mainContent-bg form .row .floor-2-fontSize{
+    font-size: 12px;
+  }
+
+  select {
+    font-size: 12px;
+    color: #9f9f9f;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border: 1px solid #9f9f9f;
+    cursor: pointer;
+    height: 42px;
+    margin-top: 8px;
+  }
+  input{
+    font-size: 12px;
+  }
+  .addInfo{
+    font-size: 14px;
+  }
+}
+
+.container .mainContent .mainContent-bg form .row .input-wrap{
+  overflow: hidden;
+  border-bottom: 2px solid #f3f3f3; 
+  height: 55px;
+}
+
+.container .mainContent .mainContent-bg form .row .form-group .no-bottom{
+  overflow: hidden;
+  border-bottom: 0; 
+  /* padding-top: 15px; /*mac*/
+  padding-top: 5px;/*windos*/
+}
+
+.container .mainContent .mainContent-bg form .row .form-group .input-wrap label {
+  float: left;
+}
+.container .mainContent .mainContent-bg form .row .form-group .input-wrap span{
+  float: right;
+  line-height: 50px;
+}
+
+/* 去掉输入框的默认样式 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /*appearance: none;windows不需要*/
+  appearance: none;/*mac需要*/
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+.blue-color{
+  color: #0071b9;
+}
+.grey-color{
+  color: #949494;
+}
+
+.container .mainContent .mainContent-bg form .row .form-group .k-hide{
+  visibility: hidden;
+  display:  block; 
+  padding: 13px;
+}
+
+.j-hide{
+  visibility: hidden;
+  display:  block; 
+  padding: 15px; 
+} 
+.h-hide{
+  visibility: hidden;
+  display:  block; 
+  padding: 24px; 
+} 
+
+.main .main-bg .form .row .form-group .addWidth{
+  width: 30px;
+}
+
+.rdo {
+  width: 20px;
+  background-color: #949494;
+  /* margin-right: 15px; */
+  border-radius: 50%;
+  position: relative;
+}
+.rdo:before,.rdo:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  transition: .3s ease;
+}
+.rdo:before {
+  top: 0px;
+  left: 0px;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border: 1px solid #949494;
+}
+.rdo:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  background-color: #fff; 
+}
+.rdo:checked:after {
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  background-color:#0071b9; 
+}
+.rdo:checked:before {
+  border-color:#0071b9; 
+} 
+
+.container .mainContent .mainContent-bg form .row .form-group #myTabContent img { 
+  width: 170px;
+  height: 100px;
+  float: left;
+  margin-right: 20px;
+}
+
+.nav-tabs {
+  border-bottom: 0;
+}
+@media(min-width:980px){
+  .nav-tabs {
+    width: 600px;
+    border-bottom: 0;
+  }  
+  .tab-content>.tab-pane {
+    width: 600px;
+    height: 110px;
+}
+}
+.nav-tabs>li {
+  margin-right: 40px;
+  margin-bottom: 0;
+  float: left;
+}
+
+.nav-tabs>li.active>a{
+  color: #0071b9;
+  cursor: pointer;
+  background-color: #fff;
+  border-color: #fff;
+  border: 0;
+} 
+
+.nav-tabs>li>a{
+  color: #8d8d8d;
+  cursor: pointer;
+  background-color: #fff;
+  border-color: #fff;
+  /* border-bottom-color: transparent; */
+} 
+.nav-tabs>li>a:hover{
+  color: #0071b9;
+  border-color: #fff;
+  background: #fff;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  color: #0071b9;
+  cursor: default;
+  background-color: #fff;
+  border: none;
+  border-bottom-color: transparent;
+}
+
+.container .mainContent .mainContent-bg form div.line{
+  height: 1px;
+  border: 1px dashed #9f9f9f;
+}
+
+.container .mainContent .mainContent-bg form #flip{
+  text-align: center;
+  margin: 15px 0;
+} 
+.container .mainContent .mainContent-bg form #flip .personInfo{
+  color: #0071b9;
+  cursor: pointer;
+} 
+
+.container .mainContent .mainContent-bg form .panel-hide{
+   display: none; 
+}
+
+.container .mainContent .mainContent-bg form .mar-rt{
+  margin-right: 40px;
+} 
+
+#myTabContent .tab-pane .fl{
+  float: left;
+}
+
+#myTabContent .tab-pane .coverPic{
+  background-size: cover;  
+  width: 170px;  
+  height: 100px;  
+  position: relative;
+  background-repeat: no-repeat;  
+}  
+
+#myTabContent .tab-pane .coverPic .addImg{
+  position: absolute;  
+  top: 0;
+  left: 0;
+  width: 170px;  
+  height: 100px;
+  /* background:rgba(255,255,255,0.3);  */
+  /* background-image: url('../img/duigou.png');  */
+  /* background-size: 60px 60px; */
+  /* background-position: center center; */
+  /* background-repeat: no-repeat; */
+}
+#myTabContent .tab-pane .coverPic .icon{
+  background:rgba(255,255,255,0.3);
+  background-image: url('../img/duigou.png'); 
+  background-size: 60px 60px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+input[type=submit] {
+  position: relative;
+  font-size: 18px;
+  line-height: 20px;
+  min-width: 38px;
+  max-width: 230px;
+  min-height: 32px;
+  padding: 0px 16px;
+  overflow-y: hidden;
+  vertical-align: middle;
+  border: 1px solid #0071b9;
+  color: #0071b9;
+  background-color: transparent;
+  /* -webkit-transform: translateZ(0); */
+  /* transform: translateZ(0); */
+  transition: all .4s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: -3px;
+}
+
+input[type=submit]:hover{
+  color: #fff;
+  background-color: #0071b9;
+  
+}
+
+@media(max-width: 768px){
+
+  .nav-tabs>li {
+    margin-right: -15px;
+    margin-bottom: 0;
+    float: left;
+  }
+  .container .mainContent .mainContent-bg form .row .form-group #myTabContent img{ 
+    width: 90px;
+    height: 50px;
+    float: left;
+    margin-right: 10px;
+  } 
+
+  #myTabContent .tab-pane .fl{
+    float: left;
+  }
+  
+  #myTabContent .tab-pane .coverPic{
+    background-size: cover;  
+    width: 80px;  
+    height: 50px;  
+    position: relative;  
+    background-repeat: no-repeat;  
+  } 
+
+  #myTabContent .tab-pane .coverPic .addImg{
+    position: absolute;  
+    top: 0;
+    left: 0;
+    width: 90px;  
+    height: 50px;
+    /* background:rgba(255,255,255,0.3);  */
+    /* background-image: url('../img/duigou.png');  */
+    /* background-size: 60px 60px; */
+    /* background-position: center center; */
+    /* background-repeat: no-repeat; */
+  }
+
+  #myTabContent .tab-pane .coverPic .icon{
+    position: absolute;  
+    top: 0;
+    left: 0;
+    width: 90px;  
+    height: 50px;
+    background:rgba(255,255,255,0.3); 
+    background-image: url('../img/duigou.png'); 
+    background-size: 40px 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  input[type=submit] {
+    font-size: 12px;
+    max-width: 120px;
+  }
+  
+  input[type=text]{
+    border-bottom: none;
+  }
+
+  .container .mainContent .mainContent-bg form .mar-rt{
+    margin-right: 0;
+  }
+
+  .j-hide{
+    visibility: hidden;
+    display:  block;
+    padding-top: 9px;
+  } 
+
+  small{
+    font-size: 65%;
+  }
+}
+
+/* input[type=submit]{
+  width: 100%;
+  border: 1px solid #0071b9;
+  background: none;
+  color: #0071b9;
+  transition: all .4s;
+  cursor: pointer;
+  margin-top: -3px;
+} */
+
+/* .yzm{
+  width: 100%;
+  border: 1px solid #0071b9;
+  background: none;
+  color: #0071b9;
+  transition: all .4s;
+  cursor: pointer;
+  margin-top: -3px;
+}
+.yzm:hover{
+  background: #0071b9;
+  color: #fff
+} */
+
+.container .mainContent .mainContent-bg .addMore{
+  display: none; 
+  text-align: center;
+  margin: 30px auto; 
+} 
+
+.container .mainContent .mainContent-bg a{
+  text-decoration: none;
+}
+a {
+  color: #0071b9
+}
+
+form>div>div{
+  background-color: #fff;
+  flex: 0 0 100%;
+  max-width: 100%;
+  border: 0;
+  text-transform: uppercase;
+}
+
+
+input[type=text]{
+  border-bottom: none;
+}
+
+h3{
+  margin-top: 40px;
+}
+@media (min-width: 325px) and (max-width: 420px){
+  input[type=submit] {
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    min-width: 38px;
+    max-width: 230px;
+    min-height: 32px;
+    padding: 0px 10px;
+    overflow-y: hidden;
+    vertical-align: middle;
+    border: 1px solid #0071b9;
+    color: #0071b9;
+    background-color: transparent;
+    /* -webkit-transform: translateZ(0); */
+    /* transform: translateZ(0); */
+    transition: all .4s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    margin-top: -45px;
+  }
+}
+
+@media (max-width: 325px){
+  /* col-xs-7,col-md-6,col-lg-6{
+    padding-right: 0;
+  } */
+  .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .h-hide{
+    visibility: hidden;
+    display:  block; 
+    padding: 0; 
+  } 
+}

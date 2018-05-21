@@ -1,0 +1,356 @@
+ *{
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  list-style: none;
+} 
+body{
+  position: relative;
+  background-color: #bcc3c7;
+  color: #3b4245;
+  margin: 0;
+  padding: 0 40px;
+  vertical-align: baseline;
+} 
+.container{
+  position: relative;
+  background-color: #fff;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+} 
+
+.container .main{
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  padding: 20px;
+}
+.main .main-bg{
+  width: 90%;
+  margin: 0 auto;
+  background-image: url('../img/bg.jpg');
+  background-position: top left;
+  background-size: 400px 400px;
+  background-repeat: no-repeat;
+}
+.main .main-bg .form{
+  width: 80%;
+  display: block;
+  margin: 10px auto;
+  background-color: #fff;
+  padding: 20px 20px; 
+  /* border: 1px solid black; */
+  box-shadow: 0 0px 15px 0 #e0e4e4;
+} 
+
+.main .main-bg .form h4{
+  font-weight: 400;
+}
+
+/* .main .main-bg .form label{
+  font-size: 18px;
+} */
+
+.main .main-bg .form .row .form-group .input-wrap{
+  overflow: hidden;
+  border-bottom: 2px solid #7b8083; 
+  height: 55px;
+}
+.main .main-bg .form .row .form-group .no-bottom{
+  overflow: hidden;
+  border-bottom: 0; 
+  /* padding-top: 15px; /*mac*/
+  padding-top: 5px;/*windos*/
+}
+
+
+.form .input-wrap label {
+  float: left;
+}
+.form .input-wrap span{
+  float: right;
+  line-height: 50px;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* appearance: none; win*/
+  appearance: none;
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+.main .main-bg .form .row #myTabContent img{ 
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: 20px;
+}
+.main .main-bg .form .row .form-group .input-wrap input[type=text]{
+  border-bottom: 0px;
+}
+.main .main-bg .form .row .form-group .sex{
+  width: 30px;
+}
+
+.addWidth{
+  width: 30px;
+}
+
+.main .main-bg .form div.line{
+  height: 1px;
+  border: 1px dashed #9f9f9f;
+}
+
+.main .main-bg #flip{
+  text-align: center;
+  margin: 15px 0;
+} 
+.main .main-bg #flip .personInfo{
+  color: #0071b9;
+  cursor: pointer;
+} 
+.main .main-bg .addMore{
+  display: none;
+  text-align: center;
+  margin: 30px auto; 
+} 
+
+.main .main-bg a{
+  text-decoration: none;
+}
+
+.k-hide{
+  visibility: hidden;
+  display:  block; 
+  padding: 25px;
+}
+.j-hide{
+  visibility: hidden;
+  display:  block; 
+  /* padding: 13px; */
+} 
+
+footer>section:first-child, footer>section:last-child {
+  border: none;
+}
+
+
+/* @media(max-width: 768px){
+	font-size: 12px;
+} */
+
+
+
+a {
+  color: #0071b9
+}
+
+a.arrow::after {
+  display: inline-block;
+  margin: 0px;
+  font: normal normal normal 14px/1 KONE-Icon-Font;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "→";
+  margin-left: 10px
+}
+
+a.download::after {
+  display: inline-block;
+  margin: 0px;
+  font: normal normal normal 14px/1 KONE-Icon-Font;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "→";
+  margin-left: 10px
+}
+
+a.worldwide::before, a.corporate::before, a.care::before {
+  display: inline-block;
+  margin: 0px;
+  font: normal normal normal 14px/1 KONE-Icon-Font;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 10px
+}
+
+a.worldwide::before {
+  content: "→"
+}
+
+a.corporate::before {
+  content: "→"
+}
+
+a.care::before {
+  content: "→"
+}
+.yzm{
+  width: 100%;
+  border: 1px solid #0071b9;
+  background: none;
+  color: #0071b9;
+  transition: all .4s;
+  cursor: pointer
+}
+.yzm:hover{
+  background: #0071b9;
+  color: #fff
+}
+
+
+
+form>div>div{
+  background-color: #fff;
+  flex: 0 0 100%;
+  max-width: 100%;
+  border: 0;
+  text-transform: uppercase;
+}
+
+select {
+  color: #9f9f9f;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border: 1px solid #9f9f9f;
+  cursor: pointer;
+  /* height: 40px; /*mac*/
+  height: 50px;/*windows*/
+}
+
+.nav-tabs {
+  border-bottom: 0;
+}
+
+.nav-tabs>li {
+  margin-right: 40px;
+  margin-bottom: 0;
+  float: left;
+}
+
+.nav-tabs>li.active>a{
+  color: #0071b9;
+  cursor: pointer;
+  background-color: #fff;
+  border-color: #fff;
+  border: 0;
+} 
+
+.nav-tabs>li>a{
+  color: #8d8d8d;
+  cursor: pointer;
+  background-color: #fff;
+
+  border-color: #fff;
+  /* border-bottom-color: transparent; */
+} 
+.nav-tabs>li>a:hover{
+  color: #0071b9;
+  border-color: #fff;
+  background: #fff;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  color: #0071b9;
+  cursor: default;
+  background-color: #fff;
+  border: none;
+  border-bottom-color: transparent;
+}
+
+
+
+
+
+#myTabContent .tab-pane .fl{
+  float: left;
+}
+
+#myTabContent .tab-pane .coverPic{
+  background-image: url('../img/1.jpg') no-repeat;
+  background-size: cover;  
+  width: 100px;  
+  height: 100px;  
+  position: relative;  
+} 
+#myTabContent .tab-pane .coverPic .icon{
+  position: absolute;  
+  top: 0;
+  left: 0;
+  width: 100px;  
+  height: 100px;
+  /* background:rgba(255,255,255,0.3);   */
+}
+#myTabContent .tab-pane .coverPic .icon:hover{
+  position: absolute;  
+  top: 0;
+  left: 0;
+  width: 100px;  
+  height: 100px;
+  background:rgba(255,255,255,0.3); 
+  background-image: url('../img/duigou.png'); 
+  background-size: 60px 60px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#myTabContent .tab-pane .coverPic .icon i{
+  position: absolute;
+  top: 50%;
+  left: 50%;  
+  margin-top: -16px;
+  margin-left: -20px;
+  color: #fff;
+  display: none;
+}
+
+/* input[type=radio]{
+  margin: 0 15px;
+} */
+
+.rdo {
+  width: 20px;
+  background-color: #949494;
+  /* margin-right: 15px; */
+  border-radius: 50%;
+  position: relative;
+}
+.rdo:before,.rdo:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  transition: .3s ease;
+}
+.rdo:before {
+  top: 0px;
+  left: 0px;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border: 1px solid #949494;
+}
+.rdo:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  background-color: #fff; 
+}
+.rdo:checked:after {
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  background-color:#0071b9; 
+}
+.rdo:checked:before {
+  border-color:#0071b9; 
+} 
