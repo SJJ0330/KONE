@@ -1,0 +1,24 @@
+.k-result{
+    position: absolute;
+    z-index: 1000000;
+    background-color: #095a9e;
+    width: 100px;
+}
+.k-result li{
+    color: #8eabf1;
+    cursor: pointer;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+}
+.k-result_li_hover{
+    background: #095a9e;
+    color: #fff;
+}
+.k-result li:hover{
+    background: #095a9e;
+    color: #fff;
+}
+input[name=province]{
+    position: relative;
+}

@@ -1,0 +1,31 @@
+@font-face{
+  font-family:'KONE-Icon-Font';
+  src:url("../font/KONE-Icon-Font.eot?hbhfqd");
+  src:url("../font/KONE-Icon-Font.eot?hbhfqd#iefix") format("embedded-opentype"),url("../font/KONE-Icon-Font.ttf?hbhfqd") format("truetype"),url("../font/KONE-Icon-Font.woff?hbhfqd") format("woff"),url("../font/KONE-Icon-Font.svg?hbhfqd#KONE-Icon-Font") format("svg");
+  font-weight:normal;font-style:normal}[class^="icon-"],[class*=" icon-"]{font-family:'KONE-Icon-Font' !important;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-landings:before{content:"\e94e"}.icon-seismic:before{content:"\e94f"}.icon-additional-power-supply:before{content:"\e950"}.icon-floor-height-opening-travel:before{content:"\e951"}.icon-quantity:before{content:"\e952"}.icon-KONE_Icon_Capacity_Imperial:before{content:"\e953"}.icon-KONE_Icon_Capacity_Metric:before{content:"\e954"}.icon-KONE_Icon_Door_Type:before{content:"\e955"}.icon-KONE_Icon_Speed:before{content:"\e956"}.icon-KONE_Icon_Control_Location:before{content:"\e957"}.icon-KONE_Icon_Elevator_Configuration:before{content:"\e958"}.icon-KONE_Icon_Power_Supply:before{content:"\e959"}.icon-KONE_Icon_Hoistway_Entrance:before{content:"\e95b"}.icon-call-back:before{content:"\e95c"}.icon-maintenance2:before{content:"\e95d"}.icon-additional-info:before{content:"\e95e"}.icon-info-box:before{content:"\e95f"}.icon-live-chat:before{content:"\e960"}.icon-xing:before{content:"\e96c"}.icon-KONE_Icons_freight_3:before{content:"\e96a"}.icon-KONE_Icons_freight_1:before{content:"\e96b"}.icon-KONE_Icons_play_button_triangle:before{content:"\e969"}.icon-facebook:before{content:"\e961"}.icon-twitter:before{content:"\e963"}.icon-linkedin:before{content:"\e964"}.icon-youtube:before{content:"\e965"}.icon-google_plus:before{content:"\e966"}.icon-pfi:before{content:"\e962"}.icon-play_button:before{content:"\e95a"}.icon-ebuli:before{content:"\e967"}.icon-share:before{content:"\e968"}.icon-cloud:before{content:"\e941"}.icon-wireless:before{content:"\e942"}.icon-mobile-phone:before{content:"\e943"}.icon-agenda:before{content:"\e944"}.icon-chat:before{content:"\e945"}.icon-tool:before{content:"\e946"}.icon-plus:before{content:"\e947"}.icon-hero_scroll_down:before{content:"\e948"}.icon-minus:before{content:"\e949"}.icon-students_graduates:before{content:"\e94a"}.icon-document:before{content:"\e94b"}.icon-professionals_technicians:before{content:"\e94c"}.icon-well_being:before{content:"\e94d"}.icon-user:before{content:"\e900"}.icon-personas:before{content:"\e901"}.icon-exit_floor:before{content:"\e902"}.icon-speak_now:before{content:"\e903"}.icon-power:before{content:"\e904"}.icon-time:before{content:"\e905"}.icon-printer:before{content:"\e906"}.icon-target_time:before{content:"\e907"}.icon-brightness_weather:before{content:"\e908"}.icon-maintenance:before{content:"\e909"}.icon-night_mode:before{content:"\e90a"}.icon-analysis:before{content:"\e90b"}.icon-reset:before{content:"\e90c"}.icon-delete:before{content:"\e90d"}.icon-home:before{content:"\e90e"}.icon-location_pin:before{content:"\e90f"}.icon-bluetooth:before{content:"\e910"}.icon-notification:before{content:"\e911"}.icon-fault:before{content:"\e912"}.icon-information:before{content:"\e913"}.icon-question:before{content:"\e914"}.icon-alarm:before{content:"\e915"}.icon-network_ip:before{content:"\e916"}.icon-edit:before{content:"\e917"}.icon-weight_lbs:before{content:"\e918"}.icon-download:before{content:"\e919"}.icon-weight_kg:before{content:"\e91a"}.icon-upload:before{content:"\e91b"}.icon-attachment:before{content:"\e91c"}.icon-search:before{content:"\e91d"}.icon-calculate:before{content:"\e91e"}.icon-usb:before{content:"\e91f"}.icon-earthquake:before{content:"\e920"}.icon-energy:before{content:"\e921"}.icon-message:before{content:"\e922"}.icon-settings:before{content:"\e923"}.icon-wait:before{content:"\e924"}.icon-fire:before{content:"\e925"}.icon-freight:before{content:"\e926"}.icon-recommendation:before{content:"\e927"}.icon-service:before{content:"\e928"}.icon-arrow_left:before{content:"\e929"}.icon-arrow_right:before{content:"\e92a"}.icon-arrow_up:before{content:"\e92b"}.icon-arrow_down:before{content:"\e92c"}.icon-arrow_upper_left:before{content:"\e92d"}.icon-arrow_upper_right:before{content:"\e92e"}.icon-arrow_lower_left:before{content:"\e92f"}.icon-arrow_lower_right:before{content:"\e930"}.icon-scroll_left:before{content:"\e931"}.icon-scroll_right:before{content:"\e932"}.icon-scroll_down:before{content:"\e933"}.icon-scroll_up:before{content:"\e934"}.icon-elevator:before{content:"\e935"}.icon-autowalk:before{content:"\e936"}.icon-escalator:before{content:"\e937"}.icon-doors_opening:before{content:"\e938"}.icon-doors:before{content:"\e939"}.icon-doors_closing:before{content:"\e93a"}.icon-doors_symbol_1:before{content:"\e93b"}.icon-accessibility:before{content:"\e93c"}.icon-doors_symbol_2:before{content:"\e93d"}.icon-accept_checkmark:before{content:"\e93e"}.icon-menu:before{content:"\e93f"}.icon-reject:before{content:"\e940"}.icon-wechat:before{content:"\e86d"}
+
+/*# sourceMappingURL=maps/icons.css.map */
+
+
+  @font-face {
+    font-family: 'iconfont';  /* project id 669127 */
+    src: url('http://at.alicdn.com/t/font_669127_i1z6813soz0bpgb9.eot');
+    src: url('http://at.alicdn.com/t/font_669127_i1z6813soz0bpgb9.eot?#iefix') format('embedded-opentype'),
+    url('http://at.alicdn.com/t/font_669127_i1z6813soz0bpgb9.woff') format('woff'),
+    url('http://at.alicdn.com/t/font_669127_i1z6813soz0bpgb9.ttf') format('truetype'),
+    url('http://at.alicdn.com/t/font_669127_i1z6813soz0bpgb9.svg#iconfont') format('svg');
+  }
+
+  .iconfont{
+    font-family:"iconfont" !important;
+    font-size:24px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: middle;
+  } 
+
+

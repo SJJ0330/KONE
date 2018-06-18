@@ -1,0 +1,305 @@
+
+
+body{
+    position: relative;
+    background-color: #bcc3c7;
+    color: #3b4245;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+  }  
+
+  @media(min-width:768px){
+    .navigation{
+      display: none;
+    }
+  }
+
+  .container{
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;/*覆盖了bootstrap的左右15px的padding*/
+    overflow: hidden;
+
+  }  
+
+  .container .mainContent{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+  }
+
+  .container .mainContent .mainContent-bg{
+    width: 93%;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    background-image: url('../img/bg.jpg');
+    /* background-position: top left; */
+    /* background-size: 400px 400px; */
+    background-position: 0 60px;
+    background-size: 570px 570px;
+    background-repeat: no-repeat;
+  }
+  .container .mainContent .mainContent-bg form{
+    width: 90%;
+    height: 100%;
+    display: block;
+    margin: 10px auto;
+    background-color: #fff;
+    padding: 40px; 
+    /* border: 1px solid black; */
+    box-shadow: 0 0px 15px 0 #e0e4e4;
+}
+  @media(max-width: 768px){
+    
+    .container{
+      position: relative;
+      background-color: #fff;
+      /* margin: 0 auto; */
+      overflow: hidden;
+      margin: 0;/*当宽度小于768px时，两侧的外边距消失*/
+    }
+    .container .mainContent .mainContent-bg{
+      width: 100%;
+      margin: 0 auto;
+      /* border: 1px solid black; */
+      background-image: url('../img/bg.jpg');
+      /* background-position: top left; */
+      /* background-size: 400px 400px; */
+      background-position: 0 60px;
+      background-size: 570px 570px;
+      background-repeat: no-repeat;
+    } 
+    .container .mainContent .mainContent-bg form{
+      width: 90%;
+      height: 100%;
+      display: block;
+      margin: 10px auto;
+      background-color: #fff;
+      padding: 40px 20px; 
+      /* border: 1px solid black; */
+      box-shadow: 0 0px 15px 0 #e0e4e4;
+  }
+}
+
+
+@media(max-width: 768px){
+  .addInfo{
+    font-size: 14px;
+  }
+}
+
+.nav-tabs {
+  border-bottom: 0;
+}
+@media(min-width:980px){
+  .nav-tabs {
+    width: 600px;
+    border-bottom: 0;
+  }  
+  .tab-content>.tab-pane {
+    width: 600px;
+    height: 110px;
+}
+}
+
+.nav-tabs>li.active>a{
+  color: #0071b9;
+  cursor: pointer;
+  background-color: #fff;
+  border-color: #fff;
+  border: 0;
+} 
+
+.nav-tabs>li>a{
+  color: #8d8d8d;
+  cursor: pointer;
+  background-color: #fff;
+  border-color: #fff;
+  /* border-bottom-color: transparent; */
+} 
+.nav-tabs>li>a:hover{
+  color: #0071b9;
+  border-color: #fff;
+  background: #fff;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  color: #0071b9;
+  cursor: default;
+  background-color: #fff;
+  border: none;
+  border-bottom-color: transparent;
+}
+
+@media(max-width: 768px){
+
+  .nav-tabs>li {
+    margin-right: -15px;
+    margin-bottom: 0;
+    float: left;
+  }
+
+  /* #myTabContent .tab-pane .fl{
+    float: left;
+  } */
+
+}
+
+.container .mainContent .mainContent-bg .addMore{
+  /* display: none;  */
+  text-align: center;
+  margin: 30px auto; 
+} 
+
+
+.container .mainContent .mainContent-bg a{
+  text-decoration: none;
+}
+a {
+  color: #0071b9
+}
+
+form>div>div{
+  background-color: #fff;
+  flex: 0 0 100%;
+  max-width: 100%;
+  border: 0;
+  text-transform: uppercase;
+}
+
+h3{
+  margin-top: 40px;
+}
+
+/* 价格 */
+.container .mainContent .mainContent-bg form ul{
+  margin: 0 auto;
+  height: 140px;
+  /* border: 1px solid black; */
+}
+.container .mainContent .mainContent-bg form ul li{
+  margin-top: -35px;
+  /* border: 1px solid black; */
+}
+.nav-tabs>li {
+  margin-right: 0;
+  margin-bottom: 0;
+  float: left;
+}
+.nav-tabs>li>a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 0;
+  border-radius: 4px 4px 0 0;
+}
+.container .mainContent .mainContent-bg form ul li.fl{
+  float: left;
+}
+.container .mainContent .mainContent-bg form ul li.fr{
+  float: right;
+}
+.container .mainContent .mainContent-bg form ul li h3{
+  height: 50px;
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+.grey-color{
+  color: #949494;
+  text-align: left;
+}
+.blue-color{
+  color: #0071b9;
+}
+.p-grey{
+  text-align: left;
+}
+.p-blue{
+  font-size: 26px;
+}
+
+.container .mainContent .mainContent-bg form #tab1{
+  margin: 0 auto;
+  width: 90%;
+  height: 300px;
+}
+@media (max-width: 768px){
+  .p-grey{
+    font-size: 14px;
+  }
+  
+  .p-blue{
+    font-size: 18px;
+  }
+  
+  .container .mainContent .mainContent-bg form ul li h3{
+    font-size:16px;
+    height: 50px;
+    margin-top: 15px; 
+  }
+}
+
+.container .mainContent .mainContent-bg .addMore{
+  text-align: center;
+  margin: 30px auto; 
+} 
+
+.container .mainContent .mainContent-bg .addMore .i-text{
+  line-height: 16px;
+}
+
+.container .mainContent .mainContent-bg form #tab2{
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+  padding-bottom: 50px;
+}
+.container .mainContent .mainContent-bg form #tab2 .outFontSize{
+  font-size: 12px;
+  text-decoration: underline;
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+}
+
+.container .mainContent .mainContent-bg form h3::before {
+  content: '';
+  background: currentcolor;
+  height: 3px;
+  height: 3px;
+  max-width: 70px;
+  max-width: 70px;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: calc(50% - (70px / 2));
+  right: 0;
+  color: transparent;
+}
+
+.container .mainContent .mainContent-bg form .nav-tabs>li.active>a h3::before {
+  content: '';
+  background: currentcolor;
+  height: 3px;
+  height: 3px;
+  max-width: 70px;
+  max-width: 70px;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: calc(50% - (70px / 2));
+  right: 0;
+  color: #0071b9;
+}
+
+/* .addInfo{
+  font-size: 16px;
+} */
+
+.container .mainContent .mainContent-bg form #myTabContent img { 
+  width: 70%;
+  /* height: 400px; */
+  
+}

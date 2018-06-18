@@ -1,0 +1,2297 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://www.kone.cn/zh/ -->
+<html lang="zh" dir="ltr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="img/k-title-logo.ico" />
+
+    <style type="text/css">
+        .modal {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 99999;
+            display: none;
+            opacity: 1;
+            -webkit-transition: opacity, display 400ms ease-in;
+            -moz-transition: opacity, display 400ms ease-in;
+            transition: opacity, display 400ms ease-in;
+        }
+
+        .modal .modal-container {
+            width: 1000px;
+            min-height: 200px;
+            height: auto;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -500px;
+            margin-top: -250px;
+            background-color: white;
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-bottom-left-radius: 5px;
+            -moz-border-radius-top-left: 5px;
+            -moz-border-radius-bottom-left: 5px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-left: 5px solid #0091d5;
+            z-index: 1000000;
+        }
+
+        .modal .close {
+            color: #fff;
+            font-size: 19px;
+            position: relative;
+            top: -40px;
+            text-align: right;
+            float: right;
+        }
+
+        .modal .modal-content h1 {
+            font-size: 25px;
+            text-align: center;
+            display: block;
+            margin: 33px 0 0;
+        }
+
+        .modal .modal-body {
+            padding-top: 33px;
+        }
+
+        @media (max-width: 1010px) {
+            .modal {
+                background: rgba(0, 0, 0, 0);
+            }
+            .modal .modal-container {
+                background-color: #fff;
+                width: 100%;
+                min-height: 190px;
+                height: auto;
+                position: absolute;
+                top: initial;
+                left: 0;
+                bottom: 0;
+                margin-left: 0;
+                margin-top: 0;
+                -webkit-border-radius: 0px;
+                -moz-border-radius: 0px;
+                -o-border-radius: 0px;
+                border-radius: 0px;
+                border-left: none;
+                border-top: 5px solid #0091d5;
+            }
+            .modal .close {
+                background-color: #0091d5;
+                -webkit-border-top-left-radius: 5px;
+                -webkit-border-top-right-radius: 5px;
+                -moz-border-top-left-radius: 5px;
+                -moz-border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                display: block;
+                float: right;
+                height: 50px;
+                text-align: center;
+                top: -50px;
+                width: 50px;
+            }
+            .modal .close span {
+                display: none;
+            }
+            .modal .close:after {
+                content: "×";
+                display: block;
+                font-size: 36px;
+            }
+            .modal .modal-content {
+                height: auto;
+                padding-bottom: 20px;
+            }
+            .modal h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+
+    <style type="text/css">
+        #voc-container {
+            margin-left: -250px;
+            width: 516px;
+        }
+
+        #rating_modalPopup_survey {
+            width: 332px;
+            height: 40px;
+            margin: 0 auto;
+        }
+
+        .rate_modalPopup_survey {
+            display: block;
+            list-style-type: none;
+            width: 100%;
+            height: 40px;
+            padding-left: 5%;
+        }
+
+        .rate_modalPopup_survey li {
+            background-image: url('/shared/VOC-files/smileys.png');
+            display: block;
+            float: left;
+            height: 40px;
+            width: 40px;
+        }
+
+        .rate_modalPopup_survey li:hover {
+            cursor: pointer;
+            cursor: hand;
+        }
+
+        .rate1_modalPopup_survey {
+            margin-left: 0;
+            background-position: -3px -8px;
+        }
+
+        .rate_modalPopup_surveySmilies-true .rate1_modalPopup_survey {
+            margin-left: 25px;
+        }
+
+        .rate1_modalPopup_survey:hover {
+            background-position: -57px -8px;
+        }
+
+        .rate1_modalPopup_survey.selected {
+            background-position: -57px -8px;
+        }
+
+        .rate2_modalPopup_survey {
+            margin-left: 25px;
+            background-position: -3px -55px;
+        }
+
+        .rate2_modalPopup_survey:hover {
+            background-position: -57px -55px;
+        }
+
+        .rate2_modalPopup_survey.selected {
+            background-position: -57px -55px;
+        }
+
+        .rate3_modalPopup_survey {
+            margin-left: 25px;
+            background-position: -3px -102px;
+        }
+
+        .rate3_modalPopup_survey:hover {
+            background-position: -57px -102px;
+        }
+
+        .rate3_modalPopup_survey.selected {
+            background-position: -57px -102px;
+        }
+
+        .rate4_modalPopup_survey {
+            margin-left: 25px;
+            background-position: -3px -149px;
+        }
+
+        .rate4_modalPopup_survey:hover {
+            background-position: -57px -149px;
+        }
+
+        .rate4_modalPopup_survey.selected {
+            background-position: -57px -149px;
+        }
+
+        .rate5_modalPopup_survey {
+            margin-left: 25px;
+            background-position: -3px -196px;
+        }
+
+        .rate_modalPopup_surveySmilies-true .rate5_modalPopup_survey {
+            margin-left: 0;
+        }
+
+        .rate5_modalPopup_survey:hover {
+            background-position: -57px -196px;
+        }
+
+        .rate5_modalPopup_survey.selected {
+            background-position: -57px -196px;
+        }
+
+        #text_modalPopup_survey {
+            border: 1px solid #d8d9da;
+            display: none;
+            font-size: 18px;
+            height: auto;
+            min-height: 110px;
+            margin: 0 auto 23px auto;
+            resize: none;
+            width: 75.6%;
+            -webkit-transition: display 400ms ease;
+            -moz-transition: display 400ms easee;
+            transition: display 400ms ease;
+        }
+
+        #button_modalPopup_survey {
+            border: 0;
+            display: none;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            background-color: #0071b9;
+            -webkit-transition: display, background-color 400ms ease;
+            -moz-transition: display, background-color 400ms easee;
+            transition: display, background-color 400ms ease;
+            font-size: 22px;
+            padding: 15px 75px;
+            width: 300px;
+            height: auto;
+            margin: 0 auto 33px auto;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -o-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-transition: display, background-color 400ms ease;
+            -moz-transition: display, background-color 400ms ease;
+            transition: display, background-color 400ms ease;
+        }
+
+        #button_modalPopup_survey[disabled] {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        #close_modalPopup_survey:after {
+            width: 100%;
+            color: white;
+            font-size: 19px;
+            position: relative;
+            top: -40px;
+            text-align: right;
+            float: right;
+        }
+
+        #arrow-up_modalPopup_survey {
+            width: 332px;
+            height: 20px;
+            margin: 0 auto;
+            position: relative;
+            top: 11px;
+            left: 8px;
+        }
+
+        .rate-arrows_modalPopup_survey {
+            display: inline-block;
+            list-style-type: none;
+            width: 100%;
+            height: 25px;
+            padding-left: 4%;
+            position: relative;
+            top: -10px;
+        }
+
+        .arrow_modalPopup_survey {
+            display: none;
+            height: 25px;
+            width: 40px;
+            float: left;
+            background: url('/shared/VOC-files/smileys.png') -55px -250px;
+        }
+
+        .arrow_modalPopup_survey.selected {
+            display: block;
+        }
+
+        .arrow_modalPopup_survey2 {
+            margin-left: 20%;
+        }
+
+        .arrow_modalPopup_survey3 {
+            margin-left: 39.5%;
+        }
+
+        .arrow_modalPopup_survey4 {
+            margin-left: 59%;
+        }
+
+        .arrow_modalPopup_survey5 {
+            margin-left: 79.5%;
+        }
+
+        #voc-container #modal-thank-you {
+            display: none;
+        }
+
+        #modal-thank-you .modal-body p {
+            font-size: 34px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        @media (max-width:736px) {
+            #voc-container {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    </style>
+    <script src="js/dd063fafe6338853eef3de6cc44f3164.js"></script>
+    <script src="js/82a04461ed0e426a89e5e0ab76d54235.js"></script>
+    <script src="js/780860e68eda8f6fb85cecf446eb23f0.js"></script>
+    <script type="text/javascript" async="" src="js/b7cd26f75270238425708a92c35c5bc3.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+
+    <script src="js/bootstrapValidator.min.js"></script>
+    
+    <script src="js/bundle.min.js"></script>
+
+    <!-- <script src="js/index.js"></script> -->
+    <script src="js/myStorage.js"></script>
+    <!-- <script src="./通力 - 为城市生活缔造更加完美的客流体验_files/serverComponent.php"></script> -->
+
+
+    <style type="text/css">
+        /* Global */
+
+        .modal-kone {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 99999;
+            display: none;
+            opacity: 1;
+            -webkit-transition: opacity, display 400ms ease-in;
+            -moz-transition: opacity, display 400ms ease-in;
+            transition: opacity, display 400ms ease-in;
+        }
+
+        .modal-container-kone {
+            width: 1000px;
+            min-height: 200px;
+            height: auto;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -500px;
+            margin-top: -250px;
+            background-color: white;
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-bottom-left-radius: 5px;
+            -moz-border-radius-top-left: 5px;
+            -moz-border-radius-bottom-left: 5px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-left: 5px solid #0091d5;
+            z-index: 1000000;
+        }
+
+        .modal-container-kone .close,
+        .modal-container-kone .modal-close {
+            color: #fff;
+            font-size: 19px;
+            position: relative;
+            top: -40px;
+            text-align: right;
+            float: right;
+        }
+
+        .modal-content-kone h1 {
+            font-size: 25px;
+            text-align: center;
+            display: block;
+            margin: 33px 0 0;
+        }
+
+        .modal-body-kone {
+            padding-top: 33px;
+        }
+
+        .module-forms input.invalid,
+        .module-forms select.invalid {
+            border-color: #d50000;
+        }
+
+        .module-forms form {
+            position: relative;
+        }
+
+        .module-forms form.processing {
+            opacity: 0.5;
+        }
+
+        /* Forms */
+
+        .module-forms .wFormContainer .form-title {
+            margin-bottom: 0;
+        }
+
+        .module-forms .wFormContainer .form-title:after {
+            display: none;
+        }
+
+        .module-forms .wFormContainer .form-description {
+            display: none;
+        }
+
+        .module-forms .wFormContainer div.wForm .oneField {
+            border: 0;
+            min-height: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            white-space: normal;
+        }
+
+        .module-forms .wFormContainer div.wForm .oneField .inputWrapper {
+            border-bottom: 0;
+            display: block;
+            margin-bottom: 0;
+            min-width: 100%;
+        }
+
+        .module-forms .wFormContainer div.wForm .oneField .choices {
+            margin-top: 0;
+        }
+
+        .module-forms .wFormContainer .wForm .inputWrapper .choices>* {
+            margin-top: 24px;
+            margin-bottom: 13px;
+        }
+
+        .module-forms .wFormContainer .wForm .inputWrapper .choices>input[type="hidden"] {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .module-forms .wForm p {
+            text-align: left;
+        }
+
+        .module-forms input,
+        .module-forms select,
+        .module-forms textarea,
+        .module-forms p {
+            font-size: 1.7rem;
+        }
+
+        .module-forms select {
+            height: 40px;
+        }
+
+        .module-forms textarea {
+            min-height: 120px;
+            padding: 0.5rem;
+        }
+
+        .module-forms p {
+            color: #666;
+            text-transform: none;
+        }
+
+        .module-forms .form-thank-you,
+        .module-forms .form-error {
+            clear: both;
+            display: none;
+            margin-top: 50px;
+        }
+
+        .module-forms .form-thank-you p,
+        .module-forms .form-error p {
+            text-align: center;
+        }
+
+        .module-forms .form-error p {
+            color: #f00;
+        }
+
+        /* Carousel */
+
+        .core-carousel-container {
+            position: relative;
+        }
+
+        .core-carousel {
+            clear: both;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .core-carousel .core-slide {
+            float: left;
+        }
+
+        .core-carousel-container .core-carousel-navigation {
+            background-color: rgba(0, 113, 185, 0.8);
+            border: 2px solid rgba(0, 113, 185, 0.8) !important;
+            border-radius: 50%;
+            color: #fff !important;
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            top: 40%;
+            margin-top: -3.2rem;
+            min-width: 6.5rem;
+            min-height: 6.5rem;
+            overflow: hidden;
+            outline: none;
+            padding: 0;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        .core-carousel-container .core-carousel-navigation[disabled] {
+            display: none;
+        }
+
+        .core-carousel-container .core-carousel-navigation:hover {
+            background-color: rgba(0, 113, 185, 1);
+            border: 2px solid rgba(0, 113, 185, 1) !important;
+        }
+
+        .core-carousel-container .core-carousel-navigation:before {
+            color: #fff;
+            font-family: KONE-Icon-Font;
+            font-size: 3rem;
+            height: 50%;
+            width: 50%;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        .core-carousel-container .core-carousel-navigation-prev {
+            left: 2%;
+        }
+
+        .core-carousel-container .core-carousel-navigation-prev:before {
+            content: "";
+        }
+
+        .core-carousel-container .core-carousel-navigation-next {
+            right: 2%;
+        }
+
+        .core-carousel-container .core-carousel-navigation-next:before {
+            content: "";
+        }
+
+        /* Recommender */
+
+        /* Recommender Module */
+
+        .module-selected-highlights.featured.recommender {
+            display: none;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+
+        .target-group-selected .module-selected-highlights.featured.recommender,
+        .module-selected-highlights.featured.recommender.active,
+        .module-selected-highlights.featured.recommender.loading {
+            display: block;
+        }
+
+        .module-selected-highlights.featured.recommender header,
+        .module-selected-highlights.featured.recommender-top header {
+            display: none;
+        }
+
+        /*.module-selected-highlights.featured.recommender.loading figure {
+	        background-color: #eee;
+        }*/
+
+        .module-selected-highlights.featured.recommender.loading figure {
+            position: static;
+        }
+
+        .module-selected-highlights.featured.recommender .primary figure {
+            min-height: 412px;
+        }
+
+        .module-selected-highlights.featured.recommender .primary article {
+            min-height: 156px;
+        }
+
+        .module-selected-highlights.featured.recommender article {
+            width: 100%;
+        }
+
+        .module-selected-highlights.featured.recommender .secondary figure {
+            height: 100%;
+            min-width: 50%;
+        }
+
+        .module-selected-highlights.featured.recommender .secondary a {
+            min-height: 208px;
+        }
+
+        .module-selected-highlights.featured.recommender figure .content-loading,
+        .module-forms form+.content-loading {
+            display: none;
+            font-size: 10px;
+            height: 40px;
+            width: 50px;
+            text-align: center;
+        }
+
+        .module-selected-highlights.featured.recommender.loading figure .content-loading,
+        .module-forms form.processing+.content-loading {
+            display: block;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+        }
+
+        .content-loading .line {
+            -webkit-animation: contentLoading 1.2s infinite ease-in-out;
+            animation: contentLoading 1.2s infinite ease-in-out;
+            background-color: #0071b9;
+            display: inline-block;
+            height: 100%;
+            width: 6px;
+            margin: 0 1px;
+        }
+
+        .content-loading .line.line2 {
+            -webkit-animation-delay: -1.1s;
+            animation-delay: -1.1s;
+        }
+
+        .content-loading .line.line3 {
+            -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s;
+        }
+
+        .content-loading .line.line4 {
+            -webkit-animation-delay: -0.9s;
+            animation-delay: -0.9s;
+        }
+
+        .content-loading .line.line5 {
+            -webkit-animation-delay: -0.8s;
+            animation-delay: -0.8s;
+        }
+
+        .module-selected-highlights.featured.recommender.loading article {
+            min-height: 148px;
+        }
+
+        /* RECOMMENDATIONS */
+
+        #recommendation-top {
+            background-color: #edeff0;
+            display: none;
+            padding: 20px;
+        }
+
+        #recommendation-top.active {
+            display: block !important;
+            width: 100% !important;
+        }
+
+        #recommendation-top .core-carousel {
+            display: block;
+            margin-bottom: 0;
+            width: 5000px;
+        }
+
+        #recommendation-top .core-carousel .core-slide {
+            flex: none;
+            max-width: 100%;
+            padding: 0 1rem 0 0;
+            width: 320px;
+        }
+
+        #recommendation-top .core-carousel .core-slide a {
+            background-color: #fff;
+            border: 0.1rem solid #dae2e7;
+            color: #3b4245;
+            display: block;
+        }
+
+        #recommendation-top figure,
+        #recommendation-top article {
+            flex: none;
+            margin: 0;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        #recommendation-top figure img {
+            height: 190px;
+            margin: 0 0 10px;
+        }
+
+        #recommendation-top a h3 {
+            display: block;
+            font-size: 1.5rem;
+            height: 80px;
+            margin: 0;
+            overflow: hidden;
+            line-height: 2.4rem;
+            padding-bottom: 10px;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        #recommendation-top a h3:before {
+            display: none;
+        }
+
+        #recommendation-top a:after {
+            right: 0;
+        }
+
+        .module-selected-highlights.featured.recommender-top .secondary {
+            flex: 75%;
+            padding: 0;
+        }
+
+        .module-selected-highlights.featured.recommender-top .primary,
+        .module-selected-highlights.featured.recommender-top .secondary .g-gutter>div {
+            flex: 25%;
+            padding: 0 10px;
+        }
+
+        #modal-target-group .target-groups {
+            display: block;
+            list-style-type: none;
+            padding-left: 0;
+            text-align: center;
+        }
+
+        #modal-target-group .modal-body-kone p {
+            font-size: 20px;
+        }
+
+        #modal-target-group .target-groups li {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 11px 25px;
+        }
+
+        #modal-target-group .target-groups a {
+            cursor: pointer;
+            display: block;
+            width: 142px;
+        }
+
+        #modal-target-group .target-groups a figure {
+            margin: 0;
+            opacity: 0.6;
+        }
+
+        #modal-target-group .target-groups a:hover figure {
+            opacity: 1;
+        }
+
+        #modal-target-group .target-groups figure div {
+            background-image: url('//dapi.kone.com/resources/img/target_groups.png');
+            width: 120px;
+            height: 260px;
+            margin: 0 auto;
+        }
+
+        #modal-target-group .target-groups figure div.architect {
+            background-position: -10px -25px;
+        }
+
+        #modal-target-group .language-de .target-groups figure div.architect {
+            background-position: -789px -25px;
+        }
+
+        #modal-target-group .target-groups figure div.consultant {
+            background-position: -125px -25px;
+        }
+
+        #modal-target-group .target-groups figure div.builder {
+            background-position: -235px -25px;
+        }
+
+        #modal-target-group .target-groups figure div.facility-manager {
+            background-position: -370px -25px;
+        }
+
+        #modal-target-group .target-groups figure div.building-owner {
+            background-position: -500px -25px;
+        }
+
+        #modal-target-group .target-groups figure div.tenant,
+        #modal-target-group .target-groups figure div.housing-board-member {
+            background-position: -630px -25px;
+        }
+
+        #modal-target-group .language-de .target-groups figure div.builder {
+            background-position: -370px -25px;
+        }
+
+        #modal-target-group .language-de .target-groups figure div.facility-manager {
+            background-position: -235px -25px;
+        }
+
+        #modal-target-group .target-groups figure figcaption {
+            color: #3D9EDB;
+            margin: 0;
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        #modal-feedback,
+        #modal-thank-you {
+            display: none;
+        }
+
+        /* THANK YOU MODAL */
+
+        #modal-thank-you .modal-body-kone p {
+            font-size: 34px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        /* FEEDBACK MODAL */
+
+        #modal-feedback .wForm {
+            padding: 0 40px 40px;
+        }
+
+        #modal-feedback .actions {
+            text-align: right;
+        }
+
+        #modal-feedback .wFormContainer div.wForm input[type=submit] {
+            float: none;
+            margin-bottom: 20px;
+            width: 200px;
+        }
+
+        #modal-feedback .wFormContainer div.wForm input.cancelBtn {
+            float: left;
+        }
+
+        .modal-kone #modal-target-group .modal-content h1 {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        /* AVATAR ICON */
+
+        .target-group-avatar-container {
+            display: block;
+        }
+
+        .target-group-avatar-container .target-group-avatar {
+            border: 2px solid #0071b9;
+            border-radius: 25px;
+            display: block;
+            height: 50px;
+            width: 50px;
+        }
+
+        .target-group-avatar-container .target-group-avatar svg {
+            display: none;
+        }
+
+        .target-group-avatar-container.active .target-group-avatar:not(.target-group-unknown) {
+            background-image: url(//dapi.kone.com/resources/img/heads_h40.png);
+            background-repeat: no-repeat;
+        }
+
+        .target-group-avatar-container.active .target-group-avatar.target-group-unknown svg {
+            display: block;
+        }
+
+        .target-group-avatar-container.active.highlight .target-group-avatar {
+            animation: pulse 2s infinite;
+            animation-iteration-count: 7;
+        }
+
+        .target-group-avatar-container.active .target-group-avatar.target-group-architect {
+            background-position: 3px 6px;
+        }
+
+        .target-group-avatar-container.active.language-de .target-group-avatar.target-group-architect {
+            background-position: -246px 6px;
+        }
+
+        .target-group-avatar-container.active .target-group-avatar.target-group-consultant {
+            background-position: -38px 6px;
+        }
+
+        .target-group-avatar-container.active .target-group-avatar.target-group-builder {
+            background-position: -77px 6px;
+        }
+
+        .target-group-avatar-container.active.language-de .target-group-avatar.target-group-builder {
+            background-position: -115px 6px;
+        }
+
+        .target-group-avatar-container.active.language-de .target-group-avatar.target-group-facility-manager {
+            background-position: -77px 6px;
+        }
+
+        .target-group-avatar-container.active .target-group-avatar.target-group-facility-manager {
+            background-position: -115px 6px;
+        }
+
+        .target-group-avatar-container.active .target-group-avatar.target-group-building-owner {
+            background-position: -158px 6px;
+        }
+
+        .target-group-avatar-container.active .target-group-avatar.target-group-housing-board-member {
+            background-position: -204px 6px;
+        }
+
+        .target-group-avatar-container.active .target-group-avatar.target-group-tenant {
+            background-position: -204px 6px;
+        }
+
+        .target-group-avatar-container.tooltip-container.active {
+            position: relative;
+            text-align: center;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .target-group-avatar-container.tooltip-container.active .tooltip {
+            background: #0071b9;
+            color: #fff;
+            display: none;
+            opacity: 0;
+            margin: 0 10px 15px 0;
+            padding: 5px 10px;
+            position: absolute;
+            right: 100%;
+            width: 200px;
+            -webkit-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+        }
+
+        .target-group-avatar-container.tooltip-container.active .tooltip:before {
+            content: " ";
+            display: block;
+            height: 20px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: -20px;
+        }
+
+        .target-group-avatar-container.tooltip-container.active .tooltip:after {
+            border-left: solid #0071b9 14px;
+            border-top: solid transparent 14px;
+            border-bottom: solid transparent 14px;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            right: -11px;
+            top: 10px;
+        }
+
+        .target-group-avatar-container.tooltip-container.active.highlight .tooltip:not(:empty),
+        .target-group-avatar-container.tooltip-container.active:hover .tooltip:not(:empty) {
+            display: block;
+            opacity: 1;
+        }
+
+        header .navigation .target-group-avatar-container.tooltip-container.active .tooltip {
+            font-size: 12px;
+            top: 1px;
+            line-height: 1.4;
+            min-height: 27px;
+            right: 34px;
+        }
+
+        header .navigation .target-group-avatar-container.tooltip-container.active .tooltip:after {
+            right: -13px;
+            top: 0;
+            border-left-width: 13px;
+            border-top-width: 13px;
+            border-bottom-width: 13px;
+        }
+
+        /* VOC */
+
+        #voc-container {
+            margin-left: -250px;
+            width: 516px;
+        }
+
+        #rating_modalPopup_survey {
+            width: 332px;
+            height: 40px;
+            margin: 0 auto;
+        }
+
+        .rate_modalPopup_survey {
+            display: block;
+            list-style-type: none;
+            width: 100%;
+            height: 40px;
+            padding-left: 5%;
+        }
+
+        .rate_modalPopup_survey li {
+            background-image: url('/shared/VOC-files/smileys.png');
+            display: block;
+            float: left;
+            height: 40px;
+            width: 40px;
+        }
+
+        .rate_modalPopup_survey li:hover {
+            cursor: pointer;
+            cursor: hand;
+        }
+
+        .rate1_modalPopup_survey {
+            margin-left: 0;
+            background-position: -3px -8px;
+        }
+
+        .rate_modalPopup_surveySmilies-true .rate1_modalPopup_survey {
+            margin-left: 25px;
+        }
+
+        .rate1_modalPopup_survey:hover {
+            background-position: -57px -8px;
+        }
+
+        .rate1_modalPopup_survey.selected {
+            background-position: -57px -8px;
+        }
+
+        .rate2_modalPopup_survey {
+            margin-left: 25px;
+            background-position: -3px -55px;
+        }
+
+        .rate2_modalPopup_survey:hover {
+            background-position: -57px -55px;
+        }
+
+        .rate2_modalPopup_survey.selected {
+            background-position: -57px -55px;
+        }
+
+        .rate3_modalPopup_survey {
+            margin-left: 25px;
+            background-position: -3px -102px;
+        }
+
+        .rate3_modalPopup_survey:hover {
+            background-position: -57px -102px;
+        }
+
+        .rate3_modalPopup_survey.selected {
+            background-position: -57px -102px;
+        }
+
+        .rate4_modalPopup_survey {
+            margin-left: 25px;
+            background-position: -3px -149px;
+        }
+
+        .rate4_modalPopup_survey:hover {
+            background-position: -57px -149px;
+        }
+
+        .rate4_modalPopup_survey.selected {
+            background-position: -57px -149px;
+        }
+
+        .rate5_modalPopup_survey {
+            margin-left: 25px;
+            background-position: -3px -196px;
+        }
+
+        .rate_modalPopup_surveySmilies-true .rate5_modalPopup_survey {
+            margin-left: 0;
+        }
+
+        .rate5_modalPopup_survey:hover {
+            background-position: -57px -196px;
+        }
+
+        .rate5_modalPopup_survey.selected {
+            background-position: -57px -196px;
+        }
+
+        #text_modalPopup_survey {
+            border: 1px solid #d8d9da;
+            display: none;
+            font-size: 18px;
+            height: auto;
+            min-height: 110px;
+            margin: 0 auto 23px auto;
+            resize: none;
+            width: 75.6%;
+            -webkit-transition: display 400ms ease;
+            -moz-transition: display 400ms easee;
+            transition: display 400ms ease;
+        }
+
+        #button_modalPopup_survey {
+            border: 0;
+            display: none;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            background-color: #0071b9;
+            -webkit-transition: display, background-color 400ms ease;
+            -moz-transition: display, background-color 400ms easee;
+            transition: display, background-color 400ms ease;
+            font-size: 22px;
+            padding: 15px 75px;
+            width: 300px;
+            height: auto;
+            margin: 0 auto 33px auto;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -o-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-transition: display, background-color 400ms ease;
+            -moz-transition: display, background-color 400ms ease;
+            transition: display, background-color 400ms ease;
+        }
+
+        #button_modalPopup_survey[disabled] {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        #close_modalPopup_survey:after {
+            width: 100%;
+            color: white;
+            font-size: 19px;
+            position: relative;
+            top: -40px;
+            text-align: right;
+            float: right;
+        }
+
+        #arrow-up_modalPopup_survey {
+            width: 332px;
+            height: 20px;
+            margin: 0 auto;
+            position: relative;
+            top: 11px;
+            left: 8px;
+        }
+
+        .rate-arrows_modalPopup_survey {
+            display: inline-block;
+            list-style-type: none;
+            width: 100%;
+            height: 25px;
+            padding-left: 4%;
+            position: relative;
+            top: -10px;
+        }
+
+        .arrow_modalPopup_survey {
+            display: none;
+            height: 25px;
+            width: 40px;
+            float: left;
+            background: url('/shared/VOC-files/smileys.png') -55px -250px;
+        }
+
+        .arrow_modalPopup_survey.selected {
+            display: block;
+        }
+
+        .arrow_modalPopup_survey2 {
+            margin-left: 20%;
+        }
+
+        .arrow_modalPopup_survey3 {
+            margin-left: 39.5%;
+        }
+
+        .arrow_modalPopup_survey4 {
+            margin-left: 59%;
+        }
+
+        .arrow_modalPopup_survey5 {
+            margin-left: 79.5%;
+        }
+
+        #voc-container #modal-thank-you {
+            display: none;
+        }
+
+        #modal-thank-you .modal-body-kone p {
+            font-size: 34px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        /* Edge Cases */
+
+        .pageID-69360 .module-campaign-highlight .button.cta,
+        .pageID-69187 .module-campaign-highlight .button.cta {
+            display: none;
+        }
+
+        #modal-target.modal-kone {
+            background: transparent;
+            display: block;
+        }
+
+        #modal-target.modal-kone .close {
+            position: static;
+        }
+
+        .campaign-header~main>#recommendation-top {
+            display: none !important;
+        }
+
+        @media (max-width: 769px) {
+            .module-selected-highlights.featured.recommender .primary a {
+                min-height: 208px;
+            }
+            .module-selected-highlights.featured.recommender .primary figure {
+                float: none;
+                min-width: 50%;
+                min-height: 0;
+            }
+            .module-selected-highlights.featured.recommender .primary figure,
+            .module-selected-highlights.featured.recommender .secondary figure {
+                height: auto;
+            }
+            .module-selected-highlights.featured.recommender .primary article {
+                min-height: 0;
+            }
+            #recommendation-top .core-carousel .core-slide {
+                height: auto;
+                width: 180px;
+                max-width: 100%;
+            }
+            #recommendation-top .core-carousel .core-slide h3 {
+                font-size: 1.3rem;
+                height: 95px;
+                line-height: 1.2;
+                padding: 0 2rem;
+            }
+            #recommendation-top figure img {
+                height: 105px;
+            }
+            .module-forms .wFormContainer div.wForm {
+                padding: 0;
+            }
+            .module-forms .wFormContainer div.wForm .oneField {
+                padding: 0 20px;
+            }
+            .core-carousel-container .core-carousel-navigation {
+                display: none;
+            }
+            #recommendation-top.active {
+                overflow-x: scroll;
+                /* fix for iOS crappy scrolling */
+                -webkit-overflow-scrolling: touch;
+                height: 100%;
+            }
+            body .navigation .logo .search {
+                right: 70px;
+            }
+            .navigation .logo a.target-group-avatar-container {
+                display: block;
+                position: absolute;
+                right: 20px;
+            }
+            .navigation .logo .target-group-avatar-container .target-group-avatar {
+                border-radius: 15px;
+                height: 30px;
+                width: 30px;
+            }
+            .target-group-avatar-container.active .target-group-avatar:not(.target-group-unknown) {
+                background-image: url(//dapi.kone.com/resources/img/heads_h25.png);
+            }
+            .target-group-avatar-container.active .target-group-avatar.target-group-architect {
+                background-position: 0 1px;
+            }
+            .target-group-avatar-container.active.language-de .target-group-avatar.target-group-architect {
+                background-position: -155px 1px;
+            }
+            .target-group-avatar-container.active .target-group-avatar.target-group-consultant {
+                background-position: -25px 1px;
+            }
+            .target-group-avatar-container.active .target-group-avatar.target-group-builder {
+                background-position: -50px 1px;
+            }
+            .target-group-avatar-container.active.language-de .target-group-avatar.target-group-builder {
+                background-position: -75px 1px;
+            }
+            .target-group-avatar-container.active .target-group-avatar.target-group-facility-manager {
+                background-position: -75px 1px;
+            }
+            .target-group-avatar-container.active.language-de .target-group-avatar.target-group-facility-manager {
+                background-position: -50px 1px;
+            }
+            .target-group-avatar-container.active .target-group-avatar.target-group-building-owner {
+                background-position: -100px 1px;
+            }
+            .target-group-avatar-container.active .target-group-avatar.target-group-housing-board-member {
+                background-position: -128px 1px;
+            }
+            #voc-container {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 1010px) {
+            .modal-kone {
+                background: rgba(0, 0, 0, 0);
+            }
+            .modal-container-kone {
+                background-color: #fff;
+                width: 100%;
+                min-height: 190px;
+                height: auto;
+                position: absolute;
+                top: initial;
+                left: 0;
+                bottom: 0;
+                margin-left: 0;
+                margin-top: 0;
+                -webkit-border-radius: 0px;
+                -moz-border-radius: 0px;
+                -o-border-radius: 0px;
+                border-radius: 0px;
+                border-left: none;
+                border-top: 5px solid #0091d5;
+            }
+            .modal-container-kone .close {
+                background-color: #0091d5;
+                -webkit-border-top-left-radius: 5px;
+                -webkit-border-top-right-radius: 5px;
+                -moz-border-top-left-radius: 5px;
+                -moz-border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                display: block;
+                float: right;
+                height: 50px;
+                text-align: center;
+                top: -50px;
+                width: 50px;
+            }
+            .modal-container-kone .close span {
+                display: none;
+            }
+            .modal-container-kone .close:after {
+                content: "×";
+                display: block;
+                font-size: 36px;
+            }
+            .modal-container-kone .modal-content {
+                height: auto;
+                padding-bottom: 20px;
+            }
+            .modal-container-kone h1 {
+                font-size: 22px;
+            }
+            .modal-kone #modal-target-group .modal-content h1 {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            #modal-target-group .target-groups li {
+                margin: 0 2% 20px;
+                width: 91px;
+            }
+            #modal-target-group .target-groups a {
+                width: auto;
+            }
+            #modal-target-group .target-groups a figure {
+                opacity: 1;
+            }
+            #modal-target-group .target-groups a figure div {
+                background-image: url(//dapi.kone.com/resources/img/heads_h40.png);
+                background-repeat: no-repeat;
+                height: 40px;
+                width: 40px;
+                margin: 0 auto;
+            }
+            #modal-target-group .target-groups figure figcaption {
+                font-size: 11px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            #modal-target-group .target-groups figure div.architect {
+                background-position: 0 0;
+            }
+            #modal-target-group .language-de .target-groups figure div.architect {
+                background-position: -249px 0px;
+            }
+            #modal-target-group .target-groups figure div.consultant {
+                background-position: -40px 0;
+            }
+            #modal-target-group .target-groups figure div.builder,
+            #modal-target-group .language-de .target-groups figure div.facility-manager {
+                background-position: -80px 0;
+            }
+            #modal-target-group .target-groups figure div.facility-manager,
+            #modal-target-group .language-de .target-groups figure div.builder {
+                background-position: -120px 0;
+            }
+            #modal-target-group .target-groups figure div.building-owner {
+                background-position: -160px 0;
+            }
+            #modal-target-group .target-groups figure div.tenant,
+            #modal-target-group .target-groups figure div.housing-board-member {
+                background-position: -204px 0;
+            }
+
+
+            /* FEEDBACK MODAL */
+            #modal-feedback .oneField {
+                padding: 0;
+            }
+            #modal-feedback textarea {
+                font-size: 13px;
+                height: 100px;
+            }
+        }
+
+        /* ANIMATIONS */
+
+        @-webkit-keyframes pulse {
+            0% {
+                -webkit-box-shadow: 0 0 0 0 rgba(0, 113, 185, 0.6);
+            }
+            70% {
+                -webkit-box-shadow: 0 0 0 10px rgba(0, 113, 185, 0);
+            }
+            100% {
+                -webkit-box-shadow: 0 0 0 0 rgba(0, 113, 185, 0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                -moz-box-shadow: 0 0 0 0 rgba(0, 113, 185, 0.6);
+                box-shadow: 0 0 0 0 rgba(0, 113, 185, 0.6);
+            }
+            70% {
+                -moz-box-shadow: 0 0 0 10px rgba(0, 113, 185, 0);
+                box-shadow: 0 0 0 10px rgba(0, 113, 185, 0);
+            }
+            100% {
+                -moz-box-shadow: 0 0 0 0 rgba(0, 113, 185, 0);
+                box-shadow: 0 0 0 0 rgba(0, 113, 185, 0);
+            }
+        }
+
+        @-webkit-keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                display: none;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                display: none;
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes contentLoadingShimmer {
+            0% {
+                background-position: -668px 0;
+            }
+            100% {
+                background-position: 668px 0;
+            }
+        }
+
+        @keyframes contentLoadingShimmer {
+            0% {
+                background-position: -668px 0;
+            }
+            100% {
+                background-position: 668px 0;
+            }
+        }
+
+        @-webkit-keyframes contentLoading {
+            0%,
+            40%,
+            100% {
+                -webkit-transform: scaleY(0.4)
+            }
+            20% {
+                -webkit-transform: scaleY(1.0)
+            }
+        }
+
+        @keyframes contentLoading {
+            0%,
+            40%,
+            100% {
+                transform: scaleY(0.4);
+                -webkit-transform: scaleY(0.4);
+            }
+            20% {
+                transform: scaleY(1.0);
+                -webkit-transform: scaleY(1.0);
+            }
+        }
+    </style>
+    <script async="" src="js/st.js"></script>
+    <script>
+        var digitalData = {
+            page: {
+                pageInfo: {
+                    "pageID": "15817",
+                    "pageType": "Generic Page",
+                    "windowTitle": "通力 - 为城市生活缔造更加完美的客流体验",
+                    "pageDescription": "We are a global leader in elevator and escalator industry. At KONE, we make people's journeys safe, convenient and reliable, in taller, smarter buildings.",
+                    "indexOptions": "INDEX",
+                    "followLinksOptions": "FOLLOW"
+                }
+            }
+        };
+
+    </script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="pagetcmid" content="tcm:156-15817-64">
+    <meta name="description" content="We are a global leader in elevator and escalator industry. At KONE, we make people&#39;s journeys safe, convenient and reliable, in taller, smarter buildings.">
+    <meta class="SwifType" data-type="string" name="title">
+    <meta class="SwifType" data-type="string" name="description" content="We are a global leader in elevator and escalator industry. At KONE, we make people&#39;s journeys safe, convenient and reliable, in taller, smarter buildings.">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <link rel="canonical" href="https://www.kone.cn/zh/">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrapValidator.min.css">
+
+    <link rel="stylesheet" href="css/chinese-simplified.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+    
+    <link rel="stylesheet" href="css/priceAndLayout.css">
+    
+    <script>
+        (function () {
+            var meta = document.createElement('meta');
+            meta.className = 'sr-only';
+            document.head.appendChild(meta);
+            var value = window.getComputedStyle(meta).getPropertyValue('width');
+            document.head.removeChild(meta);
+            if (value !== '1px') {
+                document.write('<link rel="stylesheet" href="css/chinese-simplified.css" />');
+                document.write('<link rel="stylesheet" href="css/icons.css" />');
+                document.write('<link rel="stylesheet" href="css/print.css" media="print" />');
+            }
+            return true;
+        }());
+    </script>
+    <script>
+    function cdnFallback(img) { 
+        img.onerror = null; var s = ''; 
+        img.src = img.src.replace(s, s.slice(-1) === '/' ? '/' : ''); 
+    }
+    </script>
+        
+    <title>通力 - 为城市生活缔造更加完美的客流体验</title>
+    
+    <!-- No valid script specified for chat -->
+    <link rel="stylesheet" type="text/css" href="css/new_embed-bee561032092eaa907cef89871bd8feb.css">
+    <style type="text/css">
+        .st-install-RtznQEjSn4gEKjK-DxkG .st-ui-result .st-ui-type-heading {
+            color: #0089d7 !important
+        }
+
+        .st-install-RtznQEjSn4gEKjK-DxkG .st-ui-result em {
+            font-style: normal;
+            font-weight: bold;
+            background-color: #f6fcfe !important
+        }
+    </style>
+
+</head>
+
+<body data-cdn-img="" class="language-zh pageID-15817">
+    <!-- <script type="text/javascript">
+        (function (w, d, t, u, n, s, e) {
+            w['SwiftypeObject'] = n; w[n] = w[n] || function () { (w[n].q = w[n].q || []).push(arguments); }; s = d.createElement(t);
+            e = d.getElementsByTagName(t)[0]; s.async = 1; s.src = u; e.parentNode.insertBefore(s, e);
+        })(window, document, 'script', '//s.swiftypecdn.com/install/v2/st.js', '_st');
+        _st('install', 'RtznQEjSn4gEKjK-DxkG', '2.0.0');
+    </script> -->
+
+
+    <div class="container">
+        <!-- header -->
+        <header class="kone-header" data-swiftype-index="false">
+
+            <section class="topnav screen">
+                <ul>
+                    <li>通力中国</li>
+                    <li><a class="arrow" href="https://www.kone.cn/zh/monospace-home/?target-language=en">English</a></li>
+                    <li class="screen medium-screen">
+    
+                        <a class="arrow" href="http://www.kone.com/en/local-website-selector.aspx" target="_self">Select
+                            Other Local Website</a>
+                    </li>
+                </ul>
+                <div class="screen">
+                    <a href="https://www.kone.cn/zh/">
+                        <img src="img/kone-logo-76x52_tcm156-8930.png" width="76" height="52" alt="">
+                    </a>
+                </div>
+                <ul class="screen">
+                    <li class="medium-screen">
+    
+                        <a class="arrow" href="https://www.kone.cn/zh/about-us/contact-us/">联系我们</a>
+                    </li>
+                    <li>
+                        <form action="https://www.kone.cn/zh/searchresults.aspx">
+                            <label class="search-input">
+                                <span class="sr-only">Search</span>
+                                <input type="search" class="st-default-search-input" autocomplete="off" autocorrect="off"
+                                       autocapitalize="off">
+                            </label>
+                        </form>
+                    </li>
+                </ul>
+            </section>
+    
+            <section class="navigation" style="position: relative; transform: translateY(0px);">
+                <div class="name handheld">通力家用电梯系列</div>
+                <div class="logo">
+                    <a class="navicon" href="https://www.kone.cn/zh/monospace-home/#"></a>
+                    <a href="https://www.kone.cn/zh/" class="logo-small">
+                        <img data-src="/zh/Images/kone-logo-76x52_tcm156-8930.png?v=4" class=" lazyloaded" alt=""
+                             src="img/kone-logo-76x52_tcm156-8930.png">
+    
+                    </a>
+    
+                    <a class="search" href="https://www.kone.cn/zh/monospace-home/#"></a>
+                </div>
+                <div class="search handheld" style="display: none;">
+                    <form action="https://www.kone.cn/zh/searchresults.aspx">
+                        <label class="search-input">
+                            <span class="sr-only">Search</span>
+                            <input type="search" class="st-default-search-input" placeholder="Search" autocomplete="off"
+                                   autocorrect="off" autocapitalize="off">
+                        </label>
+                    </form>
+                </div>
+    
+                <nav style="display: none;">
+                    <ul>
+    
+    
+                        <li class="">
+                            <a class="main-menu-item" href="https://www.kone.cn/zh/new-buildings/" target="_self">新梯解决方案</a>
+    
+                            <span></span>
+                            <ul class="g-grid" style="top: 0px; visibility: hidden; opacity: 1;">
+    
+    
+                                <li class="">
+                                    <a href="https://www.kone.cn/zh/new-buildings/elevators/" target="_self">电梯解决方案</a>
+    
+                                    <span></span>
+                                    <ul>
+    
+    
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/elevators/zminispace.aspx"
+                                               target="_self">Z MiniSpace™小机房电梯</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/elevators/eminispace.aspx"
+                                               target="_self">E MiniSpace™小机房电梯</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/elevators/nminispace.aspx"
+                                               target="_self">N MiniSpace™小机房电梯</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/elevators/sminispace.aspx"
+                                               target="_self">S MiniSpace™小机房电梯</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/elevators/minispace.aspx"
+                                               target="_self">MiniSpace™小机房电梯</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/elevators/highrise-minispace.aspx"
+                                               target="_self">MiniSpace™高速小机房电梯</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/elevators/emonospace.aspx"
+                                               target="_self">E MonoSpace®无机房电梯</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/elevators/nmonospace.aspx"
+                                               target="_self">N MonoSpace®无机房电梯</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/elevators/smonospace.aspx"
+                                               target="_self">S MonoSpace®无机房电梯</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/elevators/transys.aspx"
+                                               target="_self">TranSys无机房货梯</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/elevators/bed-elevator.aspx"
+                                               target="_self">医用电梯</a>
+    
+                                        </li>
+    
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="https://www.kone.cn/zh/new-buildings/escalators-and-moving-walkways/"
+                                       target="_self">自动扶梯和自动人行道解决方案</a>
+    
+                                    <span></span>
+                                    <ul>
+    
+    
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/escalators-and-moving-walkways/travelmaster-110.aspx"
+                                               target="_self">商用型自动扶梯</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/escalators-and-moving-walkways/travelmaster-115.aspx"
+                                               target="_self">倾斜式自动人行道</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/escalators-and-moving-walkways/transitmaster-120-140.aspx"
+                                               target="_self">公共交通型自动扶梯</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/escalators-and-moving-walkways/transitmaster-165-185.aspx"
+                                               target="_self">水平自动人行道</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/escalators-and-moving-walkways/innotrack.aspx"
+                                               target="_self">InnoTrack自动人行道</a>
+    
+                                        </li>
+    
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="https://www.kone.cn/zh/new-buildings/kone-people-flow-intelligence/"
+                                       target="_self">智能客流解决方案</a>
+    
+                                    <span></span>
+                                    <ul>
+    
+    
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/kone-people-flow-intelligence/building-access-control.aspx"
+                                               target="_self">Access门禁解决方案</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/kone-people-flow-intelligence/elevator-destination-control.aspx"
+                                               target="_self">目的选层解决方案</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/kone-people-flow-intelligence/elevator-display-solutions.aspx"
+                                               target="_self">信息解决方案</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/new-buildings/kone-people-flow-intelligence/monitoring-solutions.aspx"
+                                               target="_self">监控解决方案</a>
+    
+                                        </li>
+    
+                                    </ul>
+                                </li>
+    
+                            </ul>
+                        </li>
+                        <li class="active">
+                            <a class="main-menu-item" href="https://www.kone.cn/zh/monospace-home/"
+                               target="_self">无机房家用电梯</a>
+    
+                            <span></span>
+                            <ul class="g-grid" style="top: 0px; visibility: hidden; opacity: 1;">
+    
+    
+                                <li class="">
+                                    <a href="https://www.kone.cn/zh/monospace-home/monospace-home-1.aspx" target="_self">通力唯家</a>
+    
+                                </li>
+                                <li class="">
+                                    <a href="https://www.kone.cn/zh/monospace-home/monospace-home-2.aspx" target="_self">通力悦家</a>
+    
+                                </li>
+    
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a class="main-menu-item" href="https://www.kone.cn/zh/existing-buildings/" target="_self">维保与更新改造</a>
+    
+                            <span></span>
+                            <ul class="g-grid" style="top: 0px; visibility: hidden; opacity: 1;">
+    
+    
+                                <li class="">
+                                    <a href="https://www.kone.cn/zh/existing-buildings/maintenance/" target="_self">维修保养</a>
+    
+                                    <span></span>
+                                    <ul>
+    
+    
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/existing-buildings/maintenance/how-we-serve-you/"
+                                               target="_self">维保服务</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/existing-buildings/maintenance/service-packages/"
+                                               target="_self">维保方案</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/existing-buildings/maintenance/service-descriptions/"
+                                               target="_self">服务详情</a>
+    
+                                        </li>
+    
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="https://www.kone.cn/zh/existing-buildings/elevator-modernization/"
+                                       target="_self">电梯更新改造</a>
+    
+                                    <span></span>
+                                    <ul>
+    
+    
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/existing-buildings/elevator-modernization/elevator-replacement/"
+                                               target="_self">电梯整梯置换</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/existing-buildings/elevator-modernization/modular-modernization/"
+                                               target="_self">模块化更新改造</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/existing-buildings/elevator-modernization/component-upgrades/"
+                                               target="_self">部件升级</a>
+    
+                                        </li>
+    
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="https://www.kone.cn/zh/existing-buildings/escalator-autowalk-modernization/"
+                                       target="_self">自动扶梯更新改造</a>
+    
+                                    <span></span>
+                                    <ul>
+    
+    
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/existing-buildings/escalator-autowalk-modernization/full-escalator-replacement/"
+                                               target="_self">自动扶梯整梯置换</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/existing-buildings/escalator-autowalk-modernization/modular-modernization/"
+                                               target="_self">模块化更新改造</a>
+    
+                                        </li>
+    
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="https://www.kone.cn/zh/existing-buildings/buildings-without-an-elevator/"
+                                       target="_self">无电梯建筑解决方案</a>
+    
+                                </li>
+                                <li class="">
+                                    <a href="https://www.kone.cn/zh/existing-buildings/people-flow-intelligence-enhancements/"
+                                       target="_self">智能客流解决方案</a>
+    
+                                </li>
+    
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a class="main-menu-item" href="https://www.kone.cn/zh/stories-and-references/" target="_self">新闻故事与样板工程</a>
+    
+                            <span></span>
+                            <ul class="g-grid" style="top: 0px; visibility: hidden; opacity: 1;">
+    
+    
+                                <li class="">
+                                    <a href="https://www.kone.cn/zh/stories-and-references/stories/" target="_self">通力故事</a>
+    
+                                </li>
+                                <li class="">
+                                    <a href="https://www.kone.cn/zh/stories-and-references/press-releases/" target="_self">新闻</a>
+    
+                                </li>
+                                <li class="">
+                                    <a href="https://www.kone.cn/zh/stories-and-references/references/"
+                                       target="_self">样板工程</a>
+    
+                                </li>
+    
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a class="main-menu-item" href="https://www.kone.cn/zh/about-us/" target="_self">关于通力</a>
+    
+                            <span></span>
+                            <ul class="g-grid" style="top: 0px; visibility: hidden; opacity: 1;">
+    
+    
+                                <li class="">
+                                    <a href="https://www.kone.cn/zh/about-us/kone-as-a-company/" target="_self">通力公司</a>
+    
+                                    <span></span>
+                                    <ul>
+    
+    
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/about-us/kone-as-a-company/environment/"
+                                               target="_self">环保</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/about-us/kone-as-a-company/safety/"
+                                               target="_self">安全</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/about-us/kone-as-a-company/innovations/"
+                                               target="_self">创新</a>
+    
+                                        </li>
+    
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="https://www.kone.cn/zh/about-us/careers/" target="_self">职业规划</a>
+    
+                                    <span></span>
+                                    <ul>
+    
+    
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/about-us/careers/we-offer/"
+                                               target="_self">职场收获</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/about-us/careers/students-graduetes/"
+                                               target="_self">学生与毕业生</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/about-us/careers/technicians-professionals/"
+                                               target="_self">技术人员与专业人员</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/about-us/careers/recruitment-process/"
+                                               target="_self">招聘流程</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/about-us/careers/apply-now/"
+                                               target="_self">立即申请</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/about-us/careers/frequently-asked-questions/"
+                                               target="_self">常见问题解答</a>
+    
+                                        </li>
+    
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="https://www.kone.cn/zh/about-us/contact-us/" target="_self">联系我们</a>
+    
+                                    <span></span>
+                                    <ul>
+    
+    
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/about-us/contact-us/branch-offices/"
+                                               target="_self">分公司信息</a>
+    
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.kone.cn/zh/about-us/contact-us/contact-form/"
+                                               target="_self">填写联系表</a>
+    
+                                        </li>
+    
+                                    </ul>
+                                </li>
+    
+                            </ul>
+                        </li>
+    
+                    </ul>
+                </nav>
+                <ul class="handheld bottom-nav" style="display: none;">
+                    <li><a class="arrow" href="http://www.kone.com/en/local-website-selector.aspx" target="_self">Select
+                        Other Local Website</a></li>
+                    <li><a class="arrow" href="https://www.kone.cn/zh/about-us/contact-us/">联系我们</a></li>
+                </ul>
+    
+                <ul class="handheld language" style="display: none;">
+                    <li class="active">
+                        <a href="https://www.kone.cn/zh/monospace-home/#">中文</a>
+                    </li>
+                    <li><a class="arrow" href="https://www.kone.cn/zh/monospace-home/?target-language=en">English</a></li>
+                </ul>
+    
+                <div class="search screen">
+                    <form action="https://www.kone.cn/zh/searchresults.aspx">
+                        <label class="search-input">
+                            <span class="sr-only">Search</span>
+                            <input type="search" class="st-default-search-input" placeholder="Search" autocomplete="off"
+                                   autocorrect="off" autocapitalize="off">
+                        </label>
+                    </form>
+                </div>
+            </section>
+        </header>
+        <!-- header结束 -->
+    
+        <!-- main -->
+        <div class="mainContent">
+    
+            <div class="mainContent-bg">
+                <div class="form">
+                    <h3>价格和简要布置图</h3>
+                    
+                    <form id="k-form" action="" role="form" name="form" method="POST">
+                        
+                        <!-- <div class="row"> -->
+                            <!-- <div class="form-group col-xs-12 col-md-6 col-lg-6"> -->
+                                
+                                
+                                <ul id="myTab" class="nav nav-tabs">
+                                    <li class="active fl">
+                                        <a href="#tab1" data-toggle="tab">
+                                            <h3>价格</h3>
+                                        </a>
+                                    </li>
+                                    <li class="fr">
+                                        <a href="#tab2" data-toggle="tab">
+                                            <h3>简要布置图</h3>    
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div id="myTabContent" class="tab-content">
+                                    <!-- 价格 -->
+                                    <div class="tab-pane fade in active" id="tab1">
+                                        <p class="p-grey grey-color">根据您填写的技术规格，通力电梯估算出的价格区间为：</p>
+                                        <p class="p-blue blue-color price_result">15~18万元人民币</p>
+                                    </div>
+
+                                    <!-- 简要布置图 -->
+                                    <div class="tab-pane fade" id="tab2">
+                                        <p class="p-grey grey-color">根据您填写的技术规格，通力电梯预估的简要布置图为：</p>
+                                        <img src="img/buzhitu.png" alt="">
+                                    
+                                        
+                                        <div class="out">
+                                            <a class="outFontSize grey-color" href="img/buzhitu.png" download="简要布置图">导出简要布置图</a>
+                                        </div>
+                                    </div>
+
+                                   
+                                </div>
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    
+                    </form>
+
+
+                    <div class="addMore">
+                        <a id="formSave" href="technical_specifications.html">
+                            
+                            <i class="iconfont">&#xe629;</i>
+                            <span class="addInfo">
+                                返回修改技术规格
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+
+        <!-- footer -->
+        <footer data-swiftype-index="false">
+    
+            <section>
+                <div>
+                    <a class="logo" href="https://www.kone.cn/zh/">
+                        <img data-src="img/kone-logo-76x52_tcm156-8930.png" class="lazyload" alt="">
+                        <span>
+                            <img data-src="img/kone-dedicated-to-people-flow-219x52_tcm156-8932.png" class="lazyload" alt="">
+                        </span>
+                    </a>
+                </div>
+            </section>
+    
+            <section>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="https://www.kone.cn/zh/about-us/contact-us/">联系我们</a>
+                        </li>
+                        <li>
+                            <a href="https://www.kone.cn/zh/about-us/careers/">职业规划</a>
+                        </li>
+                        <li>
+                            <a href="http://www.kone.com/en/supplier-information.aspx">供应商信息</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+    
+            <section class="social" id="item-8934" data-swiftype-index="false">
+                <div>
+                    <h3>关注通力</h3>
+                    <ul>
+                        <li>
+                            <a href="http://www.kone.cn/zh/follow-us-in-wechat.aspx" title="WeChat">
+                                <i class="icon-wechat"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/konecorporation/" title="Facebook">
+                                <i class="icon-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/kone" title="LinkedIn">
+                                <i class="icon-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="https://twitter.com/KONECorporation" title="Twitter">
+                                <i class="icon-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/user/TheKONECorporation" title="Youtube">
+                                <i class="icon-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <ul>
+    
+                        <li>
+                            <a href="https://www.kone.cn/zh/legal-notice.aspx">法律声明</a>
+                        </li>
+                        <li>
+                            <a href="https://www.kone.cn/zh/data-file-protection.aspx">数据文件说明</a>
+                        </li>
+                        <li>
+                            <a href="https://www.kone.cn/zh/privacy-statement.aspx">隐私声明</a>
+                        </li>
+                        <li>
+                            <a href="https://ssl.kone.com/?rel=nofollow">商业合作通道</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+    
+            <section>
+                <div>
+                    <span>通力中国总部，上海市延安西路2299号上海世贸商城8A88，200336 | 苏ICP备17069255号-1 | 沪公网安备 31010502002857号</span>
+                </div>
+            </section>
+        </footer>
+    
+    
+    </div>
+   
+
+   
+    <script>
+            var url=window.location.href;
+            var valll=url[url.indexOf("fl_")+3];
+            console.log(typeof(valll))
+            if(valll == "6"){
+                $(".price_result").html("14~17万元人民币")
+                console.log("da")
+            }else{
+                $(".price_result").html("14~20万元人民币")
+                console.log("xiao")
+            }
+    
+        </script> 
+    
+
+</body>
+
+</html>

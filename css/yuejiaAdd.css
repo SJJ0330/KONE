@@ -1,0 +1,12 @@
+.yjText .arrow-right {
+    margin-left: 678px;
+    position: absolute;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-top: solid 1px #edeff0;
+    border-left: solid 1px #edeff0;
+    color: #0071b9;
+    margin-bottom: 27px;
+}
